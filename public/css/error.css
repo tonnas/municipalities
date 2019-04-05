@@ -1,0 +1,8 @@
+
+body {
+    background-color: white !important;
+    background: unset; /* For Safari 5.1 to 6.0 */
+}
+.navbar {
+    border-bottom: 1px solid lightgrey;
+}
