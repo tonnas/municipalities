@@ -1,0 +1,96 @@
+@media only screen and (max-width: 767px) {
+    .hero_autocomplete {
+        width: 100% !important;
+        margin-left: 0% !important;
+    }
+    #search {
+        width: 100% !important;
+        margin-left: 0% !important;
+    }
+    footer {
+        position: unset !important;
+        margin-top: 10% !important;
+    }
+    .main {
+        min-height: 350px;
+    }
+}
+h1 {
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    font-family: sans-serif ,"Fira Code Light";
+    font-size: 54px;
+    /*font-weight: 100;*/
+    line-height: 58px;
+    margin: 0 0 30px;
+    font-weight: lighter;
+}
+#search {
+    width: 70%;
+    margin-left: 15%;
+    height: 50px;
+}
+.search_input {
+    margin-top: 4rem;
+}
+.input_content {
+    position: relative;
+}
+.hero_autocomplete {
+    text-align: left;
+    width: 70%;
+    margin-left: 15%;
+    position: relative;
+    z-index: 10000;
+}
+.auto_return {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: stretch;
+    clear:both;
+    text-decoration: none;
+}
+.municipality_suggestion {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: stretch;
+    position: relative;
+    color: #272b30;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    padding: .4rem;
+    transition: 250ms all;
+    text-decoration: none;
+}
+.municipality_coan_of_arms {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 2rem;
+    flex: 0 0 2rem;
+    margin-right: .4rem;
+}
+.municipality_info{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 1rem;
+    flex: 1 0 1rem;
+}
+.municipality_mayor {
+    font-size: 1.2rem;
+    color: #696969;
+}
+.municipality_name {
+    font-size: 2rem;
+    color: #272b30;
+}
+.municipality_image {
+    height: auto;
+    width: 50px;
+    margin-right: 10px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
