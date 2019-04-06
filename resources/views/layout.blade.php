@@ -3,8 +3,18 @@
     <head>
         @include('inc.header')
 
-        @yield('styles')
+        @section('meta')
+            <title>Vyhľadávanie obcí</title>
+            <meta name="description" content="Vyhľadávanie v databáze obcí"/>
+            <meta property="og:site_name" content="Databaza obci">
+            <meta property="og:url" content="{{ route('index') }}">
+            <meta property="og:type" content="website">
+            <meta property="og:title" content="Vyhľadávanie obcí">
+            <meta property="og:description" content="Vyhľadávanie v databáze obcí">
+            <meta property="og:image" content="{{ route('index') }}/logo.png">
+        @stop
 
+        @yield('styles')
     </head>
     <body>
         <nav class="navbar">

@@ -1,5 +1,17 @@
 @extends('layout')
 
+@section('meta')
+    <link id="favicon" rel="shortcut icon" type="image/png" href="{{ route('index') }}/storage/images/{{{ $municipality->id }}}.gif" />
+    <title>{{{ $municipality->name }}}</title>
+    <meta name="description" content="Vyhľadávanie v databáze obcí"/>
+    <meta property="og:site_name" content="Databaza obci">
+    <meta property="og:url" content="{{ route('index') }}/{{{ $municipality->url_id }}}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{{ $municipality->name }}}">
+    <meta property="og:description" content="Vyhľadávanie v databáze obcí">
+    <meta property="og:image" content="{{ route('index') }}/storage/images/{{{ $municipality->id }}}.gif">
+@stop
+
 @section('styles')
     <link rel="stylesheet" href="{{ URL::asset('css/show.css') }}">
 @stop

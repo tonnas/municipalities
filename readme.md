@@ -1,23 +1,52 @@
-## About Laravel
+# Municipalities search
+[![Laravel app](https://laravel.com/)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+This repo contains a simple application for importing, displaying and searching data of Slovak municipalities.
 
-## Learning Laravel
+## Requirements
+
+- [PHP](https://www.php.net/) >= 5.6
+- [Mysql](https://www.mysql.com/)
 
 
-## Laravel Sponsors
+## Basic install
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
+Clone GitHub repo for this project locally.
+```console
+	git clone https://github.com/tonnas/municipalities.git
+```
 
-- **[Vehikl](http://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Styde](https://styde.net)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
+Cd into project directory.
+```console
+	cd municipalities
+```
+
+Install Composer Dependencies
+```console
+	composer install
+``` 
+
+Create an empty mysql database for this application
+
+If .env file does not exist, create a copy of .env.example file
+```console
+   cp .env.example .env
+```
+
+Permissions!
+
+In the .env file fill in the `DB_HOST`, `DB_PORT`, `DB_DATABASE`, `DB_USERNAME`, and `DB_PASSWORD` options to match the credentials of the database you just created. This will allow us to run migrations and seed the database in the next step.
+
+
+Once your credentials are in the .env file, now you can migrate your database.
+```console
+	php artisan migrate
+```
+
+
+Import data to database from [e-obce.sk](https://www.e-obce.sk/). This may take several minutes.
+```console
+	php artisan data:import
+```
+
+###Have fun!

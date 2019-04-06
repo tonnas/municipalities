@@ -1,5 +1,9 @@
 @extends('layout')
 
+@section('meta')
+    <title> Prebieha údržba servera. </title>
+@stop
+
 @section('styles')
     <link rel="stylesheet" href="{{ URL::asset('css/error.css') }}">
 @stop

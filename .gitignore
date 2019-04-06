@@ -7,7 +7,6 @@
 /.vagrant
 /storage/app/public/images
 
-/config/database.php
 Homestead.json
 Homestead.yaml
 npm-debug.log
