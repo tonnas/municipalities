@@ -32,12 +32,6 @@ If .env file does not exist, create a copy of .env.example file
 cp .env.example .env
 ```
 
-If you have a problem with permissions logs file, you can use these.
-```console
-sudo chgrp -R www-data storage bootstrap/cache
-sudo chmod -R ug+rwx storage bootstrap/cache
-```
-
 In the .env file fill in the `DB_HOST`, `DB_PORT`, `DB_DATABASE`, `DB_USERNAME`, and `DB_PASSWORD` options to match the credentials of the database you just created. This will allow us to run migrations and seed the database in the next step.
 
 Once your credentials are in the .env file, now you can migrate your database.
@@ -45,12 +39,18 @@ Once your credentials are in the .env file, now you can migrate your database.
 php artisan migrate
 ```
 
+If you have a problem with permissions cache file, you can use these.
+```console
+sudo chgrp -R www-data storage bootstrap/cache
+sudo chmod -R ug+rwx storage bootstrap/cache
+```
+
 Import data to database from [e-obce.sk](https://www.e-obce.sk/). This may take several minutes.
 ```console
 php artisan data:import
 ```
 
-To create the symbolic link to your imported images, you may use the storage:link Artisan command. 
+To create a symbolic link to your imported images, you may use the storage:link Artisan command. 
 ```console
 php artisan storage:link
 ```
