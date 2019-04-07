@@ -39,7 +39,7 @@ Once your credentials are in the .env file, now you can migrate your database.
 php artisan migrate
 ```
 
-If you have a problem with permissions logs file, you can use these.
+If you have a problem with permissions cache file, you can use these.
 ```console
 sudo chgrp -R www-data storage bootstrap/cache
 sudo chmod -R ug+rwx storage bootstrap/cache
