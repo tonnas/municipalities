@@ -45,6 +45,12 @@ sudo chgrp -R www-data storage bootstrap/cache
 sudo chmod -R ug+rwx storage bootstrap/cache
 ```
 
+If you see this error: `The only supported ciphers are AES-128-CBC and AES-256-CBC with the correct key lengths.`
+Rund this command.
+```console
+php artisan key:generate
+```
+
 Import data to database from [e-obce.sk](https://www.e-obce.sk/). This may take several minutes.
 ```console
 php artisan data:import
