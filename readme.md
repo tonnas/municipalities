@@ -56,7 +56,7 @@ Import data to database from [e-obce.sk](https://www.e-obce.sk/). This may take 
 php artisan data:import
 ```
 
-To create a symbolic link to your imported images, you may use the storage:link Artisan command. 
+To create a symbolic link to your imported images, use the storage:link Artisan command. 
 ```console
 php artisan storage:link
 ```
