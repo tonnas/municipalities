@@ -46,7 +46,7 @@ sudo chmod -R ug+rwx storage bootstrap/cache
 ```
 
 If you see this error: `The only supported ciphers are AES-128-CBC and AES-256-CBC with the correct key lengths.`
-Rund this command.
+run this command.
 ```console
 php artisan key:generate
 ```
