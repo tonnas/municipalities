@@ -45,10 +45,11 @@ class DataImport extends Command
         echo "\nImport in progress! - this may take a while.\n";
 
         $i = 0;
-        $pages = config('constants.paginator');
+        $pages = ['0', '500', '1000', '1500', '2000', '2500'];
+        $url   = 'https://www.e-obce.sk/zoznam_vsetkych_obci.html?strana='; 
 
         foreach ($pages as $page) {
-            $i += $this->parseDataFromUrl(config('constants.import_url') . $page);
+            $i += $this->parseDataFromUrl($url . $page);
         }
 
         echo "\nImport is completed!\n";
