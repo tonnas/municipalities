@@ -151,7 +151,7 @@ class DataImport extends Command
     }
 
     /**
-     * If Address is no set try other way.
+     * If Address is not set try other way.
      * @param $data
      * @param $dom
      * @return mixed
@@ -233,8 +233,7 @@ class DataImport extends Command
                         $municipality_worker->save();
                     }
                 }
-            }
-            catch (\Exception $e) {
+            } catch (\Exception $e) {
                 echo "Error - Municipality worker insert failed!.\n";
 
                 return null;
@@ -266,8 +265,7 @@ class DataImport extends Command
                 $address->zip       = isset($data['zip'])? $data['zip']  : null;
                 $address->street    = isset($data['street'])? $data['street']  : null;
                 $address->save();
-            }
-            catch (\Exception $e) {
+            } catch (\Exception $e) {
                 echo "Error - Address insert failed!.\n";
 
                 return null;
@@ -296,8 +294,7 @@ class DataImport extends Command
             $municipality->phone  = isset($data['phone']) ? $data['phone'] : null;
             $municipality->address_id = $address_id;
             $municipality->save();
-        }
-        catch (\Exception $e) {
+        } catch (\Exception $e) {
             echo "Error - Municipality insert failed!.\n";
             return null;
         }
@@ -316,8 +313,7 @@ class DataImport extends Command
             $contents = file_get_contents($url);
 
             Storage::disk('public')->put('images/'. $municipality_id .'.gif', $contents);
-        }
-        catch (\Exception $e) {
+        } catch (\Exception $e) {
             echo "\nError - Image saving failed!.\n";
 
             return $e->getMessage();
